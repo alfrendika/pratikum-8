@@ -1,1 +1,58 @@
 # pratikum-8
+. Enkapsulasi (Encapsulation)
+
+Menggunakan atribut private (__umur, __nilai) untuk melindungi data
+Menggunakan method private (__cek_umur(), __tentukan_grade()) untuk operasi internal
+
+2. Properti (Property)
+
+Menggunakan @property decorator untuk getter
+Menggunakan @umur.setter dan @nilai.setter untuk setter dengan validasi
+Memungkinkan akses atribut private dengan cara yang aman
+
+3. Inheritance (Pewarisan)
+
+Class Mahasiswa mewarisi dari class Person
+Constructor parent class dipanggil dengan Person.__init__(self, nama)
+Mahasiswa memiliki semua atribut dan method dari Person
+
+4. Polymorphism (Overriding)
+
+Method cetak_data() di class Mahasiswa mengoverride method cetak_data() dari Person
+Implementasi yang berbeda sesuai dengan kebutuhan class Mahasiswa
+
+5. Abstraksi (Abstraction)
+
+Class DaftarNilai menyembunyikan kompleksitas operasi data
+User hanya perlu memanggil method dengan nama yang jelas
+
+📝 Penjelasan Program
+Class Person
+Merepresentasikan data pribadi seseorang dengan atribut:
+
+nama: nama orang (public)
+alamat: alamat orang (public)
+__umur: umur orang (private)
+
+Method yang tersedia:
+
+cetak_data(): menampilkan data pribadi
+Property umur dengan getter dan setter untuk validasi
+
+Class Mahasiswa (inherits Person)
+Merepresentasikan data mahasiswa dengan tambahan:
+
+nim: nomor identitas mahasiswa
+__nilai: nilai akademik mahasiswa (private)
+
+Overriding method:
+
+cetak_data(): menampilkan data mahasiswa lengkap dengan grade
+
+Class DaftarNilai
+Mengelola daftar data mahasiswa dengan method:
+
+tambah(): menambah mahasiswa baru dengan validasi duplikasi NIM
+tampilkan(): menampilkan tabel semua mahasiswa
+ubah(nim): mengubah data mahasiswa tertentu
+hapus(nim): menghapus data mahasiswa tertentu
